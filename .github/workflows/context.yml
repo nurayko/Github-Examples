@@ -1,0 +1,12 @@
+name: context example
+
+on:
+  push
+
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step 1
+      run: |
+        echo "Hello ${{ github.action }}"
