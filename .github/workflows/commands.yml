@@ -1,0 +1,15 @@
+name: "Commands"
+
+on:
+  push
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: logging
+      run: |
+        echo "::group::My group message"
+        echo Msg 1
+        echo Msg 2
+        echo "::endgroup::"
